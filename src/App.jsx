@@ -9,6 +9,7 @@ import Cards from './components/Cards/Cards';
 import Testimonial from './components/Testimonial/Testimonial';
 import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
+import Timers from './components/Timers/Timers';
 
 function App() {
   // const [contextTheme, setContextTheme] = useState('light');
@@ -26,7 +27,7 @@ function App() {
               <Route path='contact-us' element={<ContactUs />} />
             </Routes> */}
 
-
+              <Timers/>
 
             <div id='whoarewe'>
               <Cards />

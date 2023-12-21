@@ -1,0 +1,34 @@
+/* dark-mode.css */
+
+/* Your custom styles for dark mode */
+.bg-dark {
+    /* Example: Additional styles for the dark mode background */
+    background-color: #222;
+  }
+  
+  .text-light {
+    /* Example: Additional styles for light text in dark mode */
+    color: #fff;
+  }
+  
+  /* Custom styles for header and h1 in dark mode */
+  .bg-dark header {
+    /* opacity: 50%; */
+    z-index: 0;
+    background-image: url('../assets/images/dark.png'); /* Relative path from index.css */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 952px;
+}
+  
+  .bg-dark .heroContent h1 {
+    color: white !important;
+    z-index: 99;
+  }
+
+  .bg-dark .heroContent {
+    opacity: 1 !important;
+  }
+  /* Add more custom styles for the dark mode as needed */
+  

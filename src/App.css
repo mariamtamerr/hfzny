@@ -104,6 +104,10 @@
     .heroContent a {
         width: 200px;
     }
+
+    .navbar-toggler {
+        background-color: white !important;
+    }
   }
 
 
@@ -151,14 +155,29 @@
         /* height: 300px !important; */
         padding-left: -200px !important;
     }
+
+    .logoImg {
+        display: none;
+    }
+
+    .navbar-toggler {
+        background-color: white !important;
+    }
+
+    .navbar-collapse {
+        padding-bottom: 80px !important;
+    }
+
+
 }
 
   
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 391px) {
 
 
     .title.testimonial {
         width: 300px !important;
+        /* overflow: scroll !important; */
     }
 
     .title.testimonial h1 {
@@ -170,7 +189,41 @@
         margin-top: 10px !important;
     }
 
+    *{
+        /* overflow-x: hidden; */
+    }
+
+    /* .navIcon {
+        padding-left: 24px !important;
+        display: flex;
+        /* justify-content: flex-start; */
+        /* align-self: center; */
+        /* flex-direction: row-reverse; */
     
+
+    /* a.navIcon {
+        padding-top: -2rem !important;
+    } */ 
+
+    /* .navbar {
+        display: flex;
+    } */
+
+    .navbar-collapse.collapse.show {
+
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 4rem;
+    }
+
+    .logoImg {
+        display: none;
+    }
+
+
+    .navbar-toggler {
+        background-color: white !important;
+    }
 }
 
 
@@ -182,3 +235,19 @@
 
 
 
+  @media only screen and (max-width: 1430px) {
+    .timersImg {
+        /* width: 200px !important; */
+        display: none;
+    }
+
+    .timer.container {
+        /* margin-left: 4rem !important; */
+        /* overflow: hidden; */
+        /* max-width: 1000px; */
+    }
+
+    .navbar-toggler {
+        background-color: white !important;
+    }
+  }

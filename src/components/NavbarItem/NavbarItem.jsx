@@ -14,7 +14,7 @@ const NavbarItem = () => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="">
-        <Container style={{ zIndex: "9" }}>
+        <Container className="ml-2" style={{ zIndex: "9" }}>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
@@ -74,10 +74,11 @@ const NavbarItem = () => {
               className="ms-auto"
               style={{ position: "", top: "57px", left: "1533px" }}
             >
-              <img className="logoImg" src={logo} alt="logo" />
-              <a className="navigations nav-link ms-3 fs-4 text-success">
+              <img className="logoImg navIcon" src={logo} alt="logo" />
+              <a className="navigations navIcon nav-link ms-3 fs-4 text-success">
                 {contextTheme == "light" ? (
                   <FontAwesomeIcon
+                  className="navIcon"
                     icon={faSun}
                     flip="horizontal"
                     onClick={() => setContextTheme("dark")}
@@ -85,6 +86,7 @@ const NavbarItem = () => {
                 ) : (
                   <FontAwesomeIcon
                     icon={faMoon}
+                    className="navIcon"
                     flip="horizontal"
                     onClick={() => setContextTheme("light")}
                   />
