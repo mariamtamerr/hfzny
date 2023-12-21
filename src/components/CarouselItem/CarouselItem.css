@@ -1,0 +1,45 @@
+
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon, 
+.visually-hidden {
+    /* color:green ;  */
+    /* background-color: rgba(0, 128, 0, 0.733); */
+    background-color: black;
+    border-radius: 1rem;
+
+
+}
+
+
+
+
+
+.carousel-control-prev-icon:hover , 
+.carousel-control-next-icon:hover {
+    transform: scale(1.6);
+    border-radius: 1rem;
+} 
+
+
+
+
+.little {
+    left: 58%;
+    width: 3%;
+    background-color: #141313;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+
+
+
+.grayDiv {
+    background-color: #9b9b9b;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 0rem;
+    border-radius: 1rem;
+}

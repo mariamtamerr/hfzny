@@ -1,0 +1,184 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    
+    
+/* font-family: 'Roboto', sans-serif; */
+}
+
+
+/* html,body {
+    max-width: 1400px;
+} */
+
+
+
+
+/* @media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+} */
+
+
+
+
+/* Media query for iPhone 12 */
+@media only screen and (max-width: 428px) {
+    /* NavbarItem */
+    .navigations.nav-link {
+      font-size: 0.8rem;
+    }
+  
+    /* HeroItem */
+    #intro-example {
+      height: 300px; /* Adjust height for smaller devices */
+    }
+
+    /* *{
+        overflow-x: hidden;
+    } */
+
+    .heroContent h1 {
+        font-size: 24px !important;
+        /* width: 100px !important; */
+        /* line-height: -1px; */
+        /* overflow-x:auto !important; */
+        /* width: 50px !important; */
+        /* display: grid; */
+        /* grid-template-columns: repeat(3,1fr); */
+    }
+   
+
+    .heroContent h5 {
+        font-size: 20px !important;
+        width: 290px !important;
+    }
+
+    .heroContent a {
+        width: 150px !important;
+    }
+
+    .title.testimonial {
+        width: 200px !important;
+    }
+
+    .logoImg {
+        height: 50px !important;
+        width: 90px !important;
+        /* padding: ; */
+    }
+
+    .navbar {
+        background-color: rgb(49, 54, 53)!important;
+
+    }
+
+    /* .responsive-navbar-nav {
+        background-color: white;
+    } */
+
+    .navbar-toggler {
+        background-color: white !important;
+    }
+    
+
+  }
+
+
+
+  @media only screen  and (min-width: 429px) and (max-width: 769px) {
+    .heroContent h1 {
+        font-size: 35px !important;
+    }
+
+    .heroContent h5 {
+        font-size: 25px !important;
+        max-width: 385px;
+    }
+
+    .heroContent a {
+        width: 200px;
+    }
+  }
+
+
+
+
+  @media only screen  and (min-width: 531px) and (max-width: 1400px) {
+    .title.testimonial {
+        /* width: 630px !important; */
+        width: 535px !important;
+        /* height: 300px !important; */
+        padding-left: -200px !important;
+    }
+
+      /* *{
+        overflow-x: hidden;
+    } */
+
+
+    header.container.row h1,
+    header.container.row h5 {
+        font-size: smaller !important;
+    }
+
+    .logoImg {
+        height: 0px;
+    }
+
+    .navbar {
+        background-color: rgb(94, 92, 92) !important;
+
+    }
+
+    .navbar-toggler {
+        background-color: white !important;
+    }
+    
+}
+
+
+@media only screen and (min-width: 391px) and (max-width: 530px) {
+    .title.testimonial {
+        /* width: 450px !important; */
+        width: 365px !important;
+        /* text-align: center; */
+        /* height: 300px !important; */
+        padding-left: -200px !important;
+    }
+}
+
+  
+@media only screen and (max-width: 390px) {
+
+
+    .title.testimonial {
+        width: 300px !important;
+    }
+
+    .title.testimonial h1 {
+        font-size: 24px !important;
+    }
+
+    .contentInside h3 {
+        font-size: 17px !important;
+        margin-top: 10px !important;
+    }
+
+    
+}
+
+
+  @media only screen and (max-width: 390px) {
+    body {
+        max-width: 390px;
+    }
+  }
+
+
+

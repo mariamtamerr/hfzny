@@ -1,0 +1,75 @@
+.box {
+    margin: auto;
+  }
+  
+  .card.contact {
+    padding: 8%;
+    padding-top: 35px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    height: 800px !important;
+    background-color: #0E7B60 !important;
+  }
+
+
+  .contactForm {
+    background-color: #0E7B60 !important;
+  }
+  
+  textarea[name="message"] {
+    resize: none;
+  }
+  
+  #e-mail {
+    height: 45px;
+  }
+  
+  #message {
+    height: 120px;
+  }
+  
+  input.input-box,
+  textarea.input-box {
+    background-color: #616161;
+    background-color: white;
+    /* border: #616161; */
+    color: #BDBDBD;
+  }
+  
+  input.input-box:focus,
+  textarea.input-box:focus {
+    background-color: #000000;
+    /* background-color: #0E7B60 !important; */
+    color: #BDBDBD;
+  }
+  
+  .rm-border:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  form .form-control::-webkit-input-placeholder {
+    color: #9E9E9E;
+  }
+  
+  ::-moz-placeholder {
+    color: #9E9E9E !important;
+  }
+  
+  input.btn-purple {
+    background-color: #5C6BC0;
+    color: #ffffff;
+  }
+  
+
+
+
+  @media only screen and (min-width: 1000px) and (max-width: 1400px) {
+    form.contactForm {
+
+        background-color: red !important;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    }
+}
