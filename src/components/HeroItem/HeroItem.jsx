@@ -232,7 +232,7 @@ const HeroItem = () => {
 
             </div>
 
-            <div className="col-3 heroContent" style={{paddingTop:"250px", direction:"rtl"}} >
+            <div className="col-3 heroContent" style={{paddingTop:"230px", paddingRight:"-2rem !important", direction:"rtl"}} >
 
          
 
