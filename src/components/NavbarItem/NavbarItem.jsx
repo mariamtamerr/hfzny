@@ -1,6 +1,6 @@
+import React, { useContext, useState } from "react";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../../context/Theme";
@@ -11,12 +11,19 @@ import "./NavbarItem.css";
 const NavbarItem = () => {
   const { contextTheme, setContextTheme } = useContext(ThemeContext);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle("menu-open");
+  };
+  
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" className="">
         <Container className="ml-2" style={{ zIndex: "9" }}>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleMenu} />
+          <Navbar.Collapse id="responsive-navbar-nav" className={isMenuOpen ? "show" : ""}>
             <Nav
               className="ms-auto "
               style={{
@@ -27,11 +34,13 @@ const NavbarItem = () => {
                 top: "57px",
                 fontSize: "1.2rem",
               }}
+              
             >
               <NavLink
                 className="nav-link link-light"
                 onClick={(e) => {
                   e.preventDefault();
+                  toggleMenu(); // Close the menu when a link is clicked
                   window.location.replace("/#contact-us");
                 }}
               >
@@ -41,6 +50,7 @@ const NavbarItem = () => {
                 className="nav-link link-light"
                 onClick={(e) => {
                   e.preventDefault();
+                  toggleMenu();
                   window.location.replace("/#testimonials");
                 }}
               >
@@ -50,6 +60,7 @@ const NavbarItem = () => {
                 className="nav-link link-light"
                 onClick={(e) => {
                   e.preventDefault();
+                  toggleMenu();
                   window.scrollTo({
                     top: document.querySelector("#whoarewe").offsetTop,
                     behavior: "smooth",

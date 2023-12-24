@@ -91,6 +91,14 @@
     .navbar-toggler {
         background-color: white !important;
     }
+
+   
+/* to fix the scroll to the right on mobile phones */
+    .navbar-toggler,
+    .navbar.navbar-expand-lg.navbar-light {
+        /* background-color: white !important; */
+        overflow-x: hidden;
+    }
     
 
   }
@@ -113,7 +121,15 @@
 
     .navbar-toggler {
         background-color: white !important;
+        overflow-x: hidden;
     }
+
+    .navbar.navbar-expand-lg.navbar-light {
+        /* background-color: white !important; */
+        overflow-x: hidden;
+    }
+
+    
   }
 
 
@@ -125,6 +141,11 @@
     .heroContent h5 {
         /* font-size: 20px !important; */
         width: 475px !important;
+    }
+
+    .navbar-toggler {
+        /* background-color: red !important; */
+        overflow-x: hidden;
     }
   }
 
