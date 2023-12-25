@@ -270,6 +270,10 @@
     .navbar-toggler {
         background-color: white !important;
     }
+    .footerRow {
+        /* padding-left: 100px !important; */
+        gap: 60px !important;
+    }
 }
 
 
@@ -277,6 +281,8 @@
     body {
         max-width: 390px;
     }
+
+   
   }
 
 
@@ -295,5 +301,10 @@
 
     .navbar-toggler {
         background-color: white !important;
+    }
+
+    .footerRow {
+        padding-left: 60px !important;
+        gap: 60px !important;
     }
   }

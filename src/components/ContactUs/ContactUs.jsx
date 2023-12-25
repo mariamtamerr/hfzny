@@ -1,10 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "./ContactUs.css";
 import { motion } from "framer-motion";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Spinner } from "react-bootstrap";
 import axios from "axios";
 
 const ContactUs = () => {
+
+
+  const [details, setDetails] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect( () => {
+    axios.get('https://hafzny.online/api/public/api/footer')
+    .then((result) => {
+      console.log("result is : "  , result.data.data);
+      setDetails(result.data.data);
+      setLoading(false);
+    }).catch((err) => {
+      console.log("errors is : " , err);
+      setLoading(false);  
+    });
+  }, [] )
+
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -83,7 +102,7 @@ const ContactUs = () => {
 
 {alert.show && (
         <div className={`alert ${alert.success ? 'alert-success' : 'alert-danger'}`} role="alert" style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex:9, textAlign:"center", fontSize:20}}>
-          {alert.success ? 'Form submitted successfully!' : 'Failed to submit form! Please try again.'}
+          {alert.success ? 'تم الإرسال بنجاح!' : 'فشل الإرسال! حاول مرة اخرى.'}
         </div>
       )}
 
@@ -123,9 +142,21 @@ const ContactUs = () => {
                   style={{ top: "65px", right: "30px" }}
                 >
                   <h5>رقم الهاتف</h5>
-                  <h3 className="fw-bold" style={{ color: "#003C2C" }}>
-                    +9661234567890 +9661234567891
+
+
+{
+  loading ? (
+    <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
+            ) : ( 
+               <h3 className="fw-bold" style={{ color: "#003C2C" }}>
+                    {details[0]?.phone}
                   </h3>
+            )
+}
+
+                 
                 </div>
               </div>
 
@@ -147,9 +178,22 @@ const ContactUs = () => {
                   style={{ top: "65px", right: "30px" }}
                 >
                   <h5>البريد الالكتروني</h5>
-                  <h3 className="fw-bold" style={{ color: "#003C2C" }}>
-                    publictarnsport@email.com
+
+
+                {
+                  loading ? (
+                    <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner> ) : (
+                      <h3 className="fw-bold" style={{ color: "#003C2C" }}>
+                    {details[0]?.email}
                   </h3>
+                    )
+                  
+                }
+
+
+                  
                 </div>
               </div>
             </div>
